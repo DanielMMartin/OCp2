@@ -40,7 +40,7 @@
 }
 
 .menu li {
-    margin-right: 60px; /* Space between menu items */
+    margin-right: 60px; 
 }
 
 .li-1, .li-2 {
@@ -139,11 +139,32 @@
 }
 .filter-items li {
     border-radius: 20px;
-    border-color: #F2F2F2;
     align-content: center;
     border: 2px solid #F2F2F2 ;
 }
 
+.info-container {
+    display: flex;
+    align-items: center;
+    font-size: 16px; 
+    font-weight: 400;
+    gap: 10px;
+}
+.info-section {
+    display:flex;
+    align-items: center;
+    
+    
+}
+.fa-info {
+    border-radius: 1.25rem;
+    border: 1px solid #d9d9d9;
+    display: flex;
+    width: 24px;
+    height: 24px;
+    align-items: center;
+    justify-content: center;
+}
 
 .filter-items li:hover {
     background-color: #DEEBFF;
