@@ -193,7 +193,6 @@
 	width: 100%;
 	padding: 0 50px;
 	box-sizing: border-box;
-    display: block;
     margin: 30px auto;
 }
 .section-title {
@@ -225,13 +224,31 @@
 }
 .accommodation-and-popular section {
 	background-color: var(--main-bg-color);
-	border-radius: 20px;
+	border-radius: 15px;
 	padding: 30px;
+    gap: 30px;
 	box-sizing: border-box;
+    width: 100%;
+    margin: 30px;
+    
 }
+
+a:link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    
+}
+
+a:link:visited {
+    color: inherit;
+}
+
 /****** Accommodation ***********/
 .accommodation {
 	width: 65%;
+    max-width: 100%;
+    
 }
 .accommodation-title {
     display: flex;
@@ -246,6 +263,7 @@
     width: 100%;
     height: auto;
     gap: 20px;
+    cursor: pointer;
 
 }
 .accommodation-cards img {
@@ -253,6 +271,7 @@ width: 243px;
 height: 120px;
 border-radius: 20px 20px 0px 0px;
 border: 5px;
+object-fit: cover;
 }
 
 /****** Popular ***********/
