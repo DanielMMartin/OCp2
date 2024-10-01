@@ -212,7 +212,7 @@
 .card-title {
 	font-size: 16px;
 }
-.euro {
+.usd {
 	font-weight: 700;
 }
 .neutralStar {
@@ -233,6 +233,28 @@
 .accommodation {
 	width: 65%;
 }
+.accommodation-title {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+.accommodation-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    width: 100%;
+    height: auto;
+    gap: 20px;
+
+}
+.accommodation-cards img {
+width: 243px;
+height: 120px;
+border-radius: 20px 20px 0px 0px;
+border: 5px;
+}
+
 /****** Popular ***********/
 .popular {
 	width: 32%;
