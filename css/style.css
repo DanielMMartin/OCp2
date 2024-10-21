@@ -19,7 +19,6 @@
 /*-- Navigation image, filters, and search bar below--*/
 .title-bar {
 	display: flex;
-	flex-direction: row;
 	justify-content: space-between;
 	margin-top: 10px;
 }
@@ -36,86 +35,66 @@
 .menu {
 	list-style-type: none;
 	padding: 0;
-	margin: 0;
 	display: flex;
 }
 
 .menu li {
 	margin-right: 60px;
-}
-
-.li-1,
-.li-2 {
-	display: flex;
-	align-items: center;
-	height: 30px;
 	cursor: pointer;
-	color: black;
-	transition: color;
+	color: #000000;
+	transition: color 0.3s;
 }
 
-.li-1:hover,
-.li-2:hover {
-	color: #0065fc;
+.menu li:hover {
+	color: var(--main-color);
 }
 
-.li-1 span,
-.li-2 span {
-	position: relative;
-	display: inline-block;
-}
-
-.li-1 span::before,
-.li-2 span::before {
+.menu li span::before {
 	content: "";
 	position: absolute;
 	top: -24px;
 	left: 0;
 	width: 0;
 	height: 3px;
-	background-color: #0065fc;
-	transition: width;
+	background-color: var(--main-color);
+	transition: width 0.3s;
 }
 
-.li-1:hover span::before,
-.li-2:hover span::before {
+.menu li:hover span::before {
 	width: 100%;
 }
 
 .search {
 	display: flex;
-	align-items: flex-start;
-	flex-direction: row;
-	background-color: #0065fc;
+	background-color: var(--main-color);
 	border-radius: 15px;
 }
 
 .search-bar {
-	padding: 15px 15px;
+	padding: 15px;
 	font-weight: 700;
 	font-size: 18px;
 	color: #000000;
-	border: 1px solid #f2f2f2;
+	border: 1px solid var(--main-bg-color);
 	width: 338px;
 	height: 49px;
 }
 
 .fa-location-dot {
 	color: black;
-	background-color: #f2f2f2;
+	background-color: var(--main-bg-color);
 	border-radius: 15px 0 0 15px;
-	border: 1px solid #f2f2f2;
+	border: 1px solid var(--main-bg-color);
 	align-content: space-between;
 	padding: 15px;
 	font-size: 18px;
 }
 .search-button {
-	background-color: #0065fc;
+	background-color: var(--main-color);
 	border-radius: 0px 15px 15px 0px;
 	font-weight: 700;
-	border-color: #0065fc;
-	font-style: inherit;
-	color: #f2f2f2;
+	color: var(--main-bg-color);
+
 	padding: 15px;
 	font-size: 18px;
 	border: none;
@@ -145,7 +124,7 @@
 .filter-items li {
 	border-radius: 20px;
 	align-content: center;
-	border: 2px solid #f2f2f2;
+	border: 2px solid var(--main-bg-color);
 }
 
 .info-container {
@@ -230,7 +209,6 @@
 	background-color: var(--main-bg-color);
 	border-radius: 15px;
 	padding: 30px;
-	gap: 30px;
 	box-sizing: border-box;
 	width: 100%;
 	margin: 30px;
@@ -253,7 +231,6 @@ a:link:hover {
 
 /****** Accommodation ***********/
 .accommodation {
-	width: 65%;
 	max-width: 100%;
 }
 .accommodation-title {
@@ -296,8 +273,8 @@ a:link:hover {
 .popular-cards img {
 	width: 33%;
 	height: 136px;
-	border-top-left-radius: 20px;
-	border-bottom-left-radius: 20px;
+	border-top-left-radius: 15px;
+	border-bottom-left-radius: 15px;
 }
 .popular-cards .card-content {
 	width: 67%;
@@ -328,23 +305,24 @@ a:link:hover {
 	max-width: 100%;
 	display: grid;
 	grid-template-columns: 25% 25% 25% 25%;
-	padding: 30px;
 }
 
 .ttd-card {
-	max-width: 32%;
+	margin: auto;
+
+	border-radius: 20px;
 }
 .ttd-card img {
 	width: 297.5px;
 	height: 439px;
 	border-radius: 15px 15px 0px 0px;
-	border: 5px;
+	border: none;
 	object-fit: cover;
 }
 
 .ttd-card-title {
 	font-size: 16px;
-	white-space: nowrap;
+	filter: drop-shadow(0px 10px 15px rgba(2, 1, 1, 0.1));
 }
 
 .footer-container {
@@ -352,7 +330,7 @@ a:link:hover {
 	justify-content: space-between;
 	flex-wrap: wrap;
 	margin: 0 auto;
-	max-width: 1200px;
+	background-color: var(--main-bg-color);
 }
 .footer-section {
 	flex: 1;
