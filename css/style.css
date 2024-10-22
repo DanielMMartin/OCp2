@@ -45,6 +45,18 @@
 	transition: color 0.3s;
 }
 
+/** struggling to understand why adding the text decoration: none; and color: inherit; to the card containers
+did effect the link colors.. tried removing the a:link:visited and it returned the same issue I was having before. **/
+a:link:visited {
+	color: black !important;
+	text-decoration: none;
+}
+a:link {
+	text-decoration: none;
+	color: black !important;
+	display: block;
+}
+
 .menu li:hover {
 	color: var(--main-color);
 }
@@ -187,6 +199,8 @@
 	border-radius: 20px;
 	padding: 5px;
 	filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+	text-decoration: none;
+	color: inherit;
 }
 .card img {
 	object-fit: cover;
@@ -208,25 +222,10 @@
 .accommodation-and-popular section {
 	background-color: var(--main-bg-color);
 	border-radius: 15px;
-	padding: 30px;
+	padding: 15px 30px 15px;
 	box-sizing: border-box;
 	width: 100%;
-	margin: 30px;
-}
-
-a:link {
-	text-decoration: none;
-	color: inherit;
-	display: block;
-}
-
-a:link:visited {
-	color: inherit;
-}
-
-a:link:hover {
-	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-	border-radius: 20px;
+	margin: 20px;
 }
 
 /****** Accommodation ***********/
@@ -260,6 +259,7 @@ a:link:hover {
 /****** Popular ***********/
 .popular {
 	width: 32%;
+	padding: 0px;
 }
 .popular-title {
 	display: flex;
@@ -298,19 +298,21 @@ a:link:hover {
 /****** Things to do ********/
 .things-to-do-title {
 	font-size: 22px;
-	font-weight: 700px;
 }
 
 .things-to-do {
 	max-width: 100%;
 	display: grid;
 	grid-template-columns: 25% 25% 25% 25%;
+	padding-bottom: 50px;
 }
 
 .ttd-card {
 	margin: auto;
-
-	border-radius: 20px;
+	text-decoration: none;
+	color: inherit;
+	border-radius: 15px;
+	box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 12px;
 }
 .ttd-card img {
 	width: 297.5px;
@@ -331,13 +333,17 @@ a:link:hover {
 	flex-wrap: wrap;
 	margin: 0 auto;
 	background-color: var(--main-bg-color);
+	height: 100%;
 }
 .footer-section {
 	flex: 1;
-	padding: 10px;
+	padding-bottom: 20px;
 	align-items: flex-start;
+	margin-bottom: 0px;
 }
 .footer-section ul {
 	list-style-type: none;
 	padding: 0;
+	text-decoration: none;
+	color: inherit;
 }
