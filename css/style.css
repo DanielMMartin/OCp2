@@ -309,7 +309,7 @@ a:link {
 
 /****** Things to do ********/
 .ttd-container {
-	display: grid;
+	display: flex;
 }
 .things-to-do-title {
 	font-size: 22px;
@@ -319,10 +319,7 @@ a:link {
 }
 
 .things-to-do {
-	max-width: 100%;
-	display: grid;
-	grid-template-columns: repeat(4, 4fr);
-	justify-content: center;
+	display: flex;
 	padding: 30px;
 	gap: 30px;
 }
@@ -333,9 +330,10 @@ a:link {
 	color: inherit;
 	border-radius: 15px;
 	box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 12px;
+	gap: 30px;
 }
 .ttd-card img {
-	width: 297.5px;
+	width: 350px;
 	height: 439px;
 	border-radius: 15px 15px 0px 0px;
 	border: none;
@@ -350,6 +348,7 @@ a:link {
 
 .footer {
 	bottom: 0px;
+	line-height: 2;
 }
 .footer-container {
 	display: flex;
