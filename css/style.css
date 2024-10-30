@@ -120,8 +120,10 @@ a:link {
 }
 
 .main-statement {
-	height: 300px;
-	padding: 15px 20px;
+	/* height: 300px;
+	padding: 15px 20px; */
+	width: 1340px;
+	margin: 0 auto;
 }
 
 .filters {
@@ -187,15 +189,15 @@ a:link {
 	font-size: 1.2em;
 }
 
-.header {
+.header-container {
+	width: 1340px;
+	margin: 0 auto;
 	display: flex;
 	justify-content: space-between;
 }
 .main-container {
-	width: 100%;
-	padding: 0px;
-	box-sizing: border-box;
-	margin: 0px;
+	width: 1340px;
+	margin: 0 auto;
 }
 .section-title {
 	margin: 0;
@@ -287,6 +289,7 @@ a:link {
 	height: 136px;
 	border-top-left-radius: 15px;
 	border-bottom-left-radius: 15px;
+	object-fit: cover;
 }
 .popular-cards .card-content {
 	width: 67%;
@@ -315,26 +318,26 @@ a:link {
 	font-size: 22px;
 	display: grid;
 	grid-template-rows: repeat(1, 1fr);
-	padding-left: 5%;
 }
 
 .things-to-do {
-	display: flex;
-	padding: 30px;
+	width: 1fr;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
 	gap: 30px;
+	padding-bottom: 30px;
 }
 
 .ttd-card {
-	margin: auto;
 	text-decoration: none;
 	color: inherit;
 	border-radius: 15px;
 	box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 12px;
-	gap: 30px;
+	gap: 15px;
 }
 .ttd-card img {
-	width: 350px;
-	height: 439px;
+	width: 100%;
+	height: 90%;
 	border-radius: 15px 15px 0px 0px;
 	border: none;
 	object-fit: cover;
@@ -347,25 +350,44 @@ a:link {
 }
 
 .footer {
-	bottom: 0px;
+	margin: 0;
 	line-height: 2;
+	background-color: var(--main-bg-color);
 }
 .footer-container {
 	display: flex;
-	justify-content: space-between;
-	flex-wrap: wrap;
-	margin: 0;
-	background-color: var(--main-bg-color);
+	width: 100%;
 }
+
 .footer-section {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
 	flex: 1;
-	align-items: flex-start;
-	margin-bottom: 0px;
-	padding-left: 5%;
+	padding: 20px;
+}
+
+.footer-section h4 {
+	margin: 0;
 }
 .footer-section ul {
+	margin: 0;
 	list-style-type: none;
-	padding-left: 0;
 	text-decoration: none;
 	color: inherit;
+	padding-left: 0px;
+}
+
+.footer-section li {
+	margin: 5px 0;
+}
+
+.footer-section a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.footer-section a:visited {
+	color: inherit;
+	text-decoration: none;
 }

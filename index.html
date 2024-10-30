@@ -23,12 +23,14 @@
 	<body>
 		<!-- This area contains navigation bar-->
 		<header class="header">
-			<div class="booki-title"></div>
-			<div class="title-bar">
-				<ul class="menu">
-					<li class="li-1"><span>Accommodations</span></li>
-					<li class="li-2"><span>Things to do</span></li>
-				</ul>
+			<div class="header-container">
+				<div class="booki-title"></div>
+				<div class="title-bar">
+					<ul class="menu">
+						<li class="li-1"><span>Accommodations</span></li>
+						<li class="li-2"><span>Things to do</span></li>
+					</ul>
+				</div>
 			</div>
 		</header>
 		<!-- This area contains Search bar, filters and (i) section-->
@@ -320,64 +322,58 @@
 				<!--TODO: having trouble with spacing in between things to do cards, switched from grid to flexbox 
                 due to grid giving me problems with alignment and positioning-->
 				<h2 class="things-to-do-title">Things to Do in Marseille</h2>
-				<div>
-					<section class="things-to-do">
-						<div class="ttd-card">
-							<img
-								src="./images/thingstodo/Theoldport.jpg"
-								alt="Image of port with boats"
-							/>
-							<h3 class="ttd-card-title">The Old Port</h3>
-						</div>
-						<div class="ttd-card">
-							<img
-								src="./images/thingstodo/fop.jpg"
-								alt="Image of castle on top of hill"
-							/>
-							<h3 class="ttd-card-title">Fort of Pomegues</h3>
-						</div>
-						<div class="ttd-card">
-							<img src="./images/thingstodo/cnp.jpg" alt="Image of rocky hillside" />
-							<h3 class="ttd-card-title">Calanques National Park</h3>
-						</div>
-						<div class="ttd-card">
-							<img
-								src="./images/thingstodo/ndlg.jpg"
-								alt="Image of homes on hillside"
-							/>
-							<h3 class="ttd-card-title">Notre-Dame de la Garde</h3>
-						</div>
-					</section>
-				</div>
+
+				<section class="things-to-do">
+					<div class="ttd-card">
+						<img
+							src="./images/thingstodo/Theoldport.jpg"
+							alt="Image of port with boats"
+						/>
+						<h3 class="ttd-card-title">The Old Port</h3>
+					</div>
+					<div class="ttd-card">
+						<img
+							src="./images/thingstodo/fop.jpg"
+							alt="Image of castle on top of hill"
+						/>
+						<h3 class="ttd-card-title">Fort of Pomegues</h3>
+					</div>
+					<div class="ttd-card">
+						<img src="./images/thingstodo/cnp.jpg" alt="Image of rocky hillside" />
+						<h3 class="ttd-card-title">Calanques National Park</h3>
+					</div>
+					<div class="ttd-card">
+						<img
+							src="./images/thingstodo/ndlg.jpg"
+							alt="Image of homes on hillside"
+						/>
+						<h3 class="ttd-card-title">Notre-Dame de la Garde</h3>
+					</div>
+				</section>
+
 				<footer class="footer">
 					<div class="footer-container">
 						<section class="footer-section">
 							<h4>About</h4>
-							<a href="#"
-								><ul>
-									<li>Using the Website</li>
-									<li>Terms and Conditions</li>
-									<li>Data and Privacy</li>
-								</ul></a
-							>
+							<ul>
+								<li><a href="#">Using the Website</a></li>
+								<li><a href="#">Terms and Conditions</a></li>
+								<li><a href="#">Data and Privacy</a></li>
+							</ul>
 						</section>
 						<section class="footer-section">
 							<h4>Our Accommodation</h4>
-							<a href="#"
-								><ul>
-									<li>Our Quality Promise</li>
-									<li>Add Your Hotel</li>
-								</ul></a
-							>
+							<ul>
+								<li><a href="#">Our Quality Promise</a></li>
+								<li><a href="#">Add Your Hotel</a></li>
+							</ul>
 						</section>
 						<section class="footer-section">
 							<h4>Support</h4>
-							<a href=""
-								><ul>
-									<li>Help Center</li>
-									<li>Contact Us</li>
-								</ul></a
-							>
+							<ul>
+								<li><a href="#">Help Center</a></li>
+								<li><a href="#">Contact Us</a></li>
+							</ul>
 						</section>
 					</div>
 				</footer>
