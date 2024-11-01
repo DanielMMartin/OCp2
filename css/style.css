@@ -223,11 +223,10 @@ a:link {
 /****** Accommodation And Popular ***********/
 .accommodation-and-popular {
 	display: grid;
-	grid-template-columns: 2fr 1fr;
-	/** inspect says this is an invalid property type, according to content 
-    provided it should be valid ended up not needing par. and comma**/
 	gap: 20px;
+	grid-template-columns: 2fr 1fr;
 }
+
 .accommodation-and-popular section {
 	background-color: var(--main-bg-color);
 	border-radius: 15px;
@@ -391,4 +390,13 @@ a:link {
 .footer-section a:visited {
 	color: inherit;
 	text-decoration: none;
+}
+
+/* for tablets*/
+
+@media (max-width: 1024px) {
+	.accommodation-and-popular {
+		display: grid;
+		grid-template-columns: 1fr;
+	}
 }
