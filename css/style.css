@@ -121,6 +121,8 @@ a:link {
 .main-statement {
 	max-width: 1340px;
 	width: 90%;
+	max-width: 1340px;
+	width: 90%;
 	margin: 0 auto;
 }
 
@@ -328,10 +330,14 @@ a:link {
 	display: flex;
 	flex-direction: column;
 	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
 	text-decoration: none;
 	color: inherit;
 	border-radius: 15px;
 	box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 12px;
+	/* gap: 15px; */
 	object-fit: cover;
 }
 .ttd-card img {
@@ -344,9 +350,11 @@ a:link {
 }
 
 .ttd-card-title {
+	display: flex;
 	/* display: flex; */
 	font-size: 16px;
 	padding-left: 5%;
+	margin: 0 auto;
 }
 
 .footer {
@@ -358,12 +366,16 @@ a:link {
 	display: flex;
 	max-width: 1340px;
 	width: 90%;
+	max-width: 1340px;
+	width: 90%;
 }
 
 /* footer */
 .footer-section {
 	/* display: flex;
+	/* display: flex;
 	flex-direction: column;
+	justify-content: flex-start; */
 	justify-content: flex-start; */
 	flex: 1;
 	padding: 20px;
@@ -400,6 +412,31 @@ a:link {
 	.accommodation-and-popular {
 		display: grid;
 		grid-template-columns: 1fr;
+		gap: 50px;
+	}
+	.popular-cards {
+		display: grid;
+		grid-template-rows: 1fr;
+		grid-template-columns: 1fr 1fr 1fr;
+		gap: 20px;
+	}
+	.things-to-do {
+		max-width: 100%;
+		max-height: 20%;
+	}
+	.ttd-card {
+		max-width: 100%;
+		max-height: 75%;
+	}
+	.ttd-card img {
+		max-width: 100%;
+		max-height: 70%;
+		object-fit: cover;
+	}
+	.ttd-card-title {
+		padding: 15px 19px 20px 19px;
+		text-align: center;
+		overflow: hidden;
 	}
 	.popular-cards {
 		display: grid;
