@@ -351,10 +351,8 @@ a:link {
 
 .ttd-card-title {
 	display: flex;
-	/* display: flex; */
 	font-size: 16px;
 	padding-left: 5%;
-	margin: 0 auto;
 }
 
 .footer {
