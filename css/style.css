@@ -200,6 +200,7 @@ a:link {
 	margin: 0 auto;
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 }
 .main-container {
 	max-width: 1340px;
@@ -461,6 +462,7 @@ a:link {
 
 @media (max-width: 768px) {
 	.header {
+		max-width: 768px;
 		height: 50%;
 	}
 	.header-container {
@@ -473,7 +475,7 @@ a:link {
 		display: flex;
 		justify-content: center;
 	}
-	.booki-title img {
+	.booki-title svg {
 		display: flex;
 		width: 121px;
 		height: auto;
@@ -484,6 +486,7 @@ a:link {
 		width: 10%;
 	} /* two img files for booki logo, should I be using the other one? finding difficulity with sizing logo properly  */
 	.title-bar {
+		max-width: 768px;
 		align-self: center;
 		justify-content: space-between;
 		max-width: 100%;
@@ -547,6 +550,7 @@ a:link {
 		padding-bottom: 15px;
 	}
 	.things-to-do {
+		max-width: 768px;
 		display: grid;
 		grid-template-columns: 1fr;
 		grid-template-rows: auto auto auto;
