@@ -1,6 +1,7 @@
 /****** General ***********/
 * {
 	font-family: "Raleway", sans-serif;
+	box-sizing: border-box;
 }
 :root {
 	--main-color: #0065fc;
@@ -92,7 +93,6 @@ a:link:visited {
 a:link {
 	text-decoration: none;
 	color: black !important;
-	display: grid;
 }
 
 .search {
@@ -442,6 +442,9 @@ a:link {
 /* for phones */
 
 @media (max-width: 768px) {
+	body {
+		margin: 0;
+	}
 	.main-container {
 		max-width: 1340px;
 		width: 100%;
@@ -538,7 +541,9 @@ a:link {
 		gap: 20px;
 		justify-content: center;
 	}
-
+	.filter-items li {
+		flex-basis: calc(50% - 10px);
+	}
 	.accommodation-and-popular {
 		display: grid;
 		gap: 50px;
@@ -564,7 +569,6 @@ a:link {
 	}
 	.things-to-do {
 		max-width: 768px;
-		display: grid;
 		grid-template-columns: 1fr;
 		justify-items: center;
 	}
