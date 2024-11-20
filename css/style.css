@@ -43,6 +43,7 @@
 	list-style-type: none;
 	padding: 0;
 	display: flex;
+	gap: 60px;
 }
 
 .menu li {
@@ -50,13 +51,17 @@
 	margin-right: 60px;
 	cursor: pointer;
 }
-.selected li {
-	position: relative;
-	margin-right: 60px;
-	border-top: #0065fc 5px solid;
-}
+
+/* .menu li.selected {
+	border-top: #0065fc 3px solid;
+	color: var(--main-color);
+} */
 
 .menu li:hover {
+	color: var(--main-color);
+}
+
+.menu li.selected:hover {
 	color: var(--main-color);
 }
 
@@ -80,7 +85,6 @@
 	display: grid;
 	padding: 0px;
 }
-
 a:link:visited {
 	color: black !important;
 	text-decoration: none;
@@ -152,6 +156,7 @@ a:link {
 	padding: 0px;
 	margin: 20px;
 	gap: 15px;
+	font-size: 14px;
 }
 .filter-items li {
 	border-radius: 20px;
@@ -159,11 +164,6 @@ a:link {
 	border: 2px solid var(--main-bg-color);
 }
 
-.info-container {
-	/* display: flex;
-	font-size: 16px;
-	font-weight: 400; */
-}
 .info-section {
 	display: flex;
 	align-items: center;
@@ -189,7 +189,7 @@ a:link {
 .filter-items span {
 	display: flex;
 	align-items: center;
-	padding: 8px 16px;
+	padding: 16px 32px;
 	gap: 10px;
 }
 
@@ -250,15 +250,8 @@ a:link {
 }
 
 /****** Accommodation ***********/
-.accommodation {
-	/* max-width: 100%;
-	grid-column: 1 / 2;
-	justify-self: start; */
-}
+
 .accommodation-title {
-	/* display: flex;
-	justify-content: space-between;
-	flex-direction: row; */
 	margin-bottom: 20px;
 }
 .accommodation-cards {
@@ -281,12 +274,6 @@ a:link {
 }
 
 /****** Popular ***********/
-.popular {
-	/* max-width: 100%;
-	padding: 0px;
-	grid-column: 2 / 3;
-	justify-self: start; */
-}
 .popular-title {
 	display: flex;
 	justify-content: space-between;
@@ -323,9 +310,7 @@ a:link {
 }
 
 /****** Things to do ********/
-.ttd-container {
-	display: flex;
-}
+
 .things-to-do-title {
 	font-size: 22px;
 	display: grid;
@@ -342,22 +327,14 @@ a:link {
 .ttd-card {
 	display: flex;
 	flex-direction: column;
-	overflow: hidden;
-	display: flex;
-	flex-direction: column;
-	overflow: hidden;
-	text-decoration: none;
 	color: inherit;
 	border-radius: 15px;
 	box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 12px;
-	object-fit: cover;
 }
 .ttd-card img {
 	width: 100%;
-	height: 100%;
-	border: none;
-	gap: 15px;
 	object-fit: cover;
+	border-radius: 15px 15px 0px 0px;
 }
 
 .ttd-card-title {
@@ -465,6 +442,10 @@ a:link {
 /* for phones */
 
 @media (max-width: 768px) {
+	.main-container {
+		max-width: 1340px;
+		width: 100%;
+	}
 	.header {
 		max-width: 768px;
 		height: 50%;
@@ -490,6 +471,7 @@ a:link {
 		margin-top: 5%;
 		width: 10%;
 	} /* two img files for booki logo, should I be using the other one? finding difficulity with sizing logo properly  */
+
 	.title-bar {
 		display: block;
 		align-self: center;
@@ -514,6 +496,10 @@ a:link {
 		transition: width 0.3s;
 		width: 0;
 	}
+	.menu li span::before {
+		top: unset;
+		bottom: -15px;
+	}
 
 	.main-statement {
 		padding-left: 20px;
@@ -535,14 +521,22 @@ a:link {
 		border: none;
 		border-radius: 15px;
 		font-weight: 700;
+		box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 12px;
+	}
+	h4 {
+		margin: 25px 0px 0px 0px;
 	}
 	.filters {
+		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
 	}
 
 	.filter-items {
+		display: flex;
 		flex-wrap: wrap;
+		gap: 20px;
+		justify-content: center;
 	}
 
 	.accommodation-and-popular {
@@ -559,7 +553,6 @@ a:link {
 	.popular-cards {
 		display: grid;
 		grid-template-columns: 1fr;
-		grid-template-rows: auto auto auto;
 		gap: 20px;
 	}
 	.popular {
@@ -573,7 +566,7 @@ a:link {
 		max-width: 768px;
 		display: grid;
 		grid-template-columns: 1fr;
-		grid-template-rows: auto auto auto;
+		justify-items: center;
 	}
 	.ttd-card img {
 		max-height: 85%;
