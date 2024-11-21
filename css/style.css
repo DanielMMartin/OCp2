@@ -8,6 +8,9 @@
 	--main-bg-color: #f2f2f2;
 	--filter-bg-color: #deebff;
 }
+body {
+	margin: 0;
+}
 .fa-solid,
 .fa-regular {
 	color: var(--main-color);
@@ -21,56 +24,54 @@
 }
 /*-- Navigation image, filters, and search bar below--*/
 .title-bar {
-	display: flex;
+	/* display: flex;
 	justify-content: space-between;
 	margin-top: 0px;
+	height: 80px;
+	align-items: flex-start; */
 }
 
 .booki-title img {
 	height: 50%;
 	width: 45%;
 	padding: 15px;
-	/* background-image: url(../images/logo/Booki.png);  */
-	/* background-repeat: no-repeat;
-	background-size: contain;
-	width: 100px;
-	height: 75px; */
-	/* margin-left: 15px;
-	margin-top: 10px; !!! 
-    had to go back and fix this after a better understanding of containers, 
-    im not even sure what I was trying to accomplish in the beginning here */
 }
 .menu {
 	list-style-type: none;
 	padding: 0;
 	display: flex;
-	gap: 60px;
+	/* gap: 60px; */
+	margin: 0;
+	height: 80px;
+	align-items: flex-start;
+}
+.menu li {
+	padding: 0px;
 }
 
-.menu li {
+.menu label {
+	display: inline-block;
 	position: relative;
 	margin-right: 60px;
 	cursor: pointer;
 }
 
-/* .menu li.selected {
-	border-top: #0065fc 3px solid;
-	color: var(--main-color);
-} */
+.menu input[type="radio"] {
+	display: none;
+}
 
-.menu li:hover {
+.menu input[type="radio"]:checked + label {
+	color: var(--main-color);
+	border-top: var(--main-color) 4px solid;
+}
+.menu label:hover {
 	color: var(--main-color);
 }
 
-.menu li.selected:hover {
-	color: var(--main-color);
-}
-
-.menu li span::before {
+.menu label span::before {
 	content: "";
 	position: absolute;
-	top: -24px;
-	left: 0;
+	top: -39px;
 	width: 100%;
 	height: 3px;
 	background-color: var(--main-color);
@@ -78,14 +79,14 @@
 	width: 0;
 }
 
-.menu li:hover span::before {
+.menu label:hover span::before {
 	width: 100%;
 }
 
-.menu li span {
+/* .menu label span {
 	display: grid;
 	padding: 0px;
-}
+} */
 a:link:visited {
 	color: black !important;
 	text-decoration: none;
@@ -499,7 +500,7 @@ a:link {
 		transition: width 0.3s;
 		width: 0;
 	}
-	.menu li span::before {
+	.menu label span::before {
 		top: unset;
 		bottom: -15px;
 	}
@@ -583,5 +584,9 @@ a:link {
 	.footer-container {
 		display: flex;
 		flex-direction: column;
+		width: 100%;
+		position: static;
+	}
+	.footer {
 	}
 }
