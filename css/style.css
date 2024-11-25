@@ -24,11 +24,11 @@ body {
 }
 /*-- Navigation image, filters, and search bar below--*/
 .title-bar {
-	/* display: flex;
+	display: flex;
 	justify-content: space-between;
 	margin-top: 0px;
 	height: 80px;
-	align-items: flex-start; */
+	align-items: flex-start;
 }
 
 .booki-title img {
@@ -42,7 +42,7 @@ body {
 	display: flex;
 	/* gap: 60px; */
 	margin: 0;
-	height: 80px;
+	/* height: 80px; */
 	align-items: flex-start;
 }
 .menu li {
@@ -241,7 +241,7 @@ a:link {
 }
 
 .accommodation-and-popular section {
-	background-color: var(--main-bg-color);
+	/* background-color: var(--main-bg-color); */
 	border-radius: 15px;
 	padding: 15px 30px 15px;
 	box-sizing: border-box;
@@ -251,6 +251,9 @@ a:link {
 }
 
 /****** Accommodation ***********/
+.accommodation {
+	background-color: var(--main-bg-color);
+}
 
 .accommodation-title {
 	margin-bottom: 20px;
@@ -275,6 +278,9 @@ a:link {
 }
 
 /****** Popular ***********/
+.popular {
+	background-color: var(--main-bg-color);
+}
 .popular-title {
 	display: flex;
 	justify-content: space-between;
@@ -549,8 +555,10 @@ a:link {
 		display: grid;
 		gap: 50px;
 	}
+
 	.accommodation {
 		grid-row: 2;
+		background-color: transparent;
 	}
 	.accommodation-cards {
 		grid-template-columns: 1fr;
@@ -563,6 +571,7 @@ a:link {
 	}
 	.popular {
 		grid-row: 1;
+		background-color: var(--main-bg-color);
 	}
 	.things-to-do-title {
 		padding-top: 50px;
