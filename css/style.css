@@ -45,8 +45,9 @@ body {
 	/* height: 80px; */
 	align-items: flex-start;
 }
+
 .menu li {
-	padding: 0px;
+	padding-top: 10px;
 }
 
 .menu label {
@@ -58,11 +59,13 @@ body {
 
 .menu input[type="radio"] {
 	display: none;
+	padding-top: 10px;
 }
 
 .menu input[type="radio"]:checked + label {
 	color: var(--main-color);
 	border-top: var(--main-color) 4px solid;
+	padding: 10px;
 }
 .menu label:hover {
 	color: var(--main-color);
@@ -497,105 +500,111 @@ a:link {
 		width: 50%;
 		margin-right: 0px;
 	}
-	.menu :before {
-		content: "";
-		position: absolute;
-		left: 0;
-		height: 3px;
-		background-color: var(--main-color);
-		transition: width 0.3s;
-		width: 0;
-	}
-	.menu label span::before {
-		top: unset;
-		bottom: -15px;
-	}
-
-	.main-statement {
-		padding-left: 20px;
-		padding-right: 20px;
-	}
-	.search-button {
-		display: none;
-		position: relative;
-		background-color: #0065fc;
-	}
-	.fa-magnifying-glass {
-		position: absolute;
-		display: inline;
-		font-size: 16px;
-		color: var(--main-bg-color);
-		background-color: var(--main-color);
-		padding: 15px;
-		font-size: 18px;
-		border: none;
-		border-radius: 15px;
-		font-weight: 700;
-		box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 12px;
-	}
-	h4 {
-		margin: 25px 0px 0px 0px;
-	}
-	.filters {
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
-	}
-
-	.filter-items {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 20px;
-		justify-content: center;
-	}
-	.filter-items li {
-		flex-basis: calc(50% - 10px);
-	}
-	.accommodation-and-popular {
-		display: grid;
-		gap: 50px;
-	}
-
-	.accommodation {
-		grid-row: 2;
-		background-color: transparent;
-	}
-	.accommodation-cards {
-		grid-template-columns: 1fr;
-		grid-template-rows: auto auto auto;
-	}
-	.popular-cards {
-		display: grid;
-		grid-template-columns: 1fr;
-		gap: 20px;
-	}
-	.popular {
-		grid-row: 1;
-		background-color: var(--main-bg-color);
-	}
-	.things-to-do-title {
-		padding-top: 50px;
-		padding-bottom: 15px;
-	}
-	.things-to-do {
-		max-width: 768px;
-		grid-template-columns: 1fr;
-		justify-items: center;
-	}
-	.ttd-card img {
-		max-height: 85%;
-		object-fit: cover;
-	}
-	.ttd-card-title {
+	.menu input[type="radio"]:checked + label {
+		color: var(--main-color);
+		border-bottom: var(--main-color) 4px solid;
+		border-top: none;
 		padding: 6px;
-		margin: 0;
 	}
-	.footer-container {
-		display: flex;
-		flex-direction: column;
-		width: 100%;
-		position: static;
-	}
-	.footer {
-	}
+}
+.menu :before {
+	content: "";
+	position: absolute;
+	left: 0;
+	height: 3px;
+	background-color: var(--main-color);
+	transition: width 0.3s;
+	width: 0;
+}
+.menu label span::before {
+	top: unset;
+	bottom: -15px;
+}
+
+.main-statement {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.search-button {
+	display: none;
+	position: relative;
+	background-color: #0065fc;
+}
+.fa-magnifying-glass {
+	position: absolute;
+	display: inline;
+	font-size: 16px;
+	color: var(--main-bg-color);
+	background-color: var(--main-color);
+	padding: 15px;
+	font-size: 18px;
+	border: none;
+	border-radius: 15px;
+	font-weight: 700;
+	box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 12px;
+}
+h4 {
+	margin: 25px 0px 0px 0px;
+}
+.filters {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.filter-items {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+	justify-content: center;
+}
+.filter-items li {
+	flex-basis: calc(50% - 10px);
+}
+.accommodation-and-popular {
+	display: grid;
+	gap: 50px;
+}
+
+.accommodation {
+	grid-row: 2;
+	background-color: transparent;
+}
+.accommodation-cards {
+	grid-template-columns: 1fr;
+	grid-template-rows: auto auto auto;
+}
+.popular-cards {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 20px;
+}
+.popular {
+	grid-row: 1;
+	background-color: var(--main-bg-color);
+}
+.things-to-do-title {
+	padding-top: 50px;
+	padding-bottom: 15px;
+}
+.things-to-do {
+	max-width: 768px;
+	grid-template-columns: 1fr;
+	justify-items: center;
+}
+.ttd-card img {
+	max-height: 85%;
+	object-fit: cover;
+}
+.ttd-card-title {
+	padding: 6px;
+	margin: 0;
+}
+.footer-container {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	position: static;
+}
+.footer {
 }
