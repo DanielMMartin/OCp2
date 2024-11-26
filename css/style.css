@@ -584,13 +584,22 @@ h4 {
 	background-color: var(--main-bg-color);
 }
 .things-to-do-title {
-	padding-top: 50px;
-	padding-bottom: 15px;
+	margin-bottom: 20px;
 }
 .things-to-do {
 	max-width: 768px;
 	grid-template-columns: 1fr;
 	justify-items: center;
+	gap: 10px;
+	display: grid;
+}
+.ttd-container {
+	width: 100%;
+	justify-items: center;
+}
+.ttd-card {
+	height: 100%;
+	width: 60%;
 }
 .ttd-card img {
 	max-height: 85%;
@@ -607,4 +616,5 @@ h4 {
 	position: static;
 }
 .footer {
+	padding-top: 0px;
 }
