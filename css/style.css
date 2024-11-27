@@ -402,6 +402,9 @@ a:link {
 /* for tablets*/
 
 @media (max-width: 1024px) {
+	.filter-items span {
+		padding: 15px;
+	}
 	.accommodation-and-popular {
 		display: grid;
 		grid-template-columns: 1fr;
@@ -433,7 +436,7 @@ a:link {
 		height: 85%;
 	}
 	.ttd-card img {
-		max-height: 85%;
+		max-height: 80%;
 		object-fit: cover;
 	}
 	.ttd-card-title {
@@ -506,115 +509,118 @@ a:link {
 		border-top: none;
 		padding: 6px;
 	}
-}
-.menu :before {
-	content: "";
-	position: absolute;
-	left: 0;
-	height: 3px;
-	background-color: var(--main-color);
-	transition: width 0.3s;
-	width: 0;
-}
-.menu label span::before {
-	top: unset;
-	bottom: -15px;
-}
 
-.main-statement {
-	padding-left: 20px;
-	padding-right: 20px;
-}
-.search-button {
-	display: none;
-	position: relative;
-	background-color: #0065fc;
-}
-.fa-magnifying-glass {
-	position: absolute;
-	display: inline;
-	font-size: 16px;
-	color: var(--main-bg-color);
-	background-color: var(--main-color);
-	padding: 15px;
-	font-size: 18px;
-	border: none;
-	border-radius: 15px;
-	font-weight: 700;
-	box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 12px;
-}
-h4 {
-	margin: 25px 0px 0px 0px;
-}
-.filters {
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-}
+	.menu :before {
+		content: "";
+		position: absolute;
+		left: 0;
+		height: 3px;
+		background-color: var(--main-color);
+		transition: width 0.3s;
+		width: 0;
+	}
+	.menu label span::before {
+		top: unset;
+		bottom: -15px;
+	}
 
-.filter-items {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 20px;
-	justify-content: center;
-}
-.filter-items li {
-	flex-basis: calc(50% - 10px);
-}
-.accommodation-and-popular {
-	display: grid;
-	gap: 50px;
-}
+	.main-statement {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	.search-button {
+		display: none;
+		position: relative;
+		background-color: #0065fc;
+	}
+	.fa-magnifying-glass {
+		position: absolute;
+		display: inline;
+		font-size: 16px;
+		color: var(--main-bg-color);
+		background-color: var(--main-color);
+		padding: 15px;
+		font-size: 18px;
+		border: none;
+		border-radius: 15px;
+		font-weight: 700;
+		box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 12px;
+	}
+	h4 {
+		margin: 25px 0px 0px 0px;
+	}
+	.filters {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+	}
 
-.accommodation {
-	grid-row: 2;
-	background-color: transparent;
-}
-.accommodation-cards {
-	grid-template-columns: 1fr;
-	grid-template-rows: auto auto auto;
-}
-.popular-cards {
-	display: grid;
-	grid-template-columns: 1fr;
-	gap: 20px;
-}
-.popular {
-	grid-row: 1;
-	background-color: var(--main-bg-color);
-}
-.things-to-do-title {
-	margin-bottom: 20px;
-}
-.things-to-do {
-	max-width: 768px;
-	grid-template-columns: 1fr;
-	justify-items: center;
-	gap: 10px;
-	display: grid;
-}
-.ttd-container {
-	width: 100%;
-	justify-items: center;
-}
-.ttd-card {
-	height: 100%;
-	width: 60%;
-}
-.ttd-card img {
-	max-height: 85%;
-	object-fit: cover;
-}
-.ttd-card-title {
-	padding: 6px;
-	margin: 0;
-}
-.footer-container {
-	display: flex;
-	flex-direction: column;
-	width: 100%;
-	position: static;
-}
-.footer {
-	padding-top: 0px;
+	.filter-items {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 20px;
+		justify-content: center;
+	}
+	.filter-items li {
+		flex-basis: calc(50% - 10px);
+	}
+	.accommodation-and-popular {
+		display: grid;
+		gap: 50px;
+	}
+
+	.accommodation {
+		grid-row: 2;
+		background-color: transparent;
+	}
+	.accommodation-cards {
+		grid-template-columns: 1fr;
+		grid-template-rows: auto auto auto;
+	}
+	.popular-cards {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 20px;
+	}
+	.popular {
+		grid-row: 1;
+		background-color: var(--main-bg-color);
+	}
+	.things-to-do-title {
+		margin-bottom: 20px;
+	}
+	.things-to-do {
+		/* max-width: 768px; */
+		grid-template-columns: 1fr;
+		justify-items: center;
+		gap: 15px;
+		display: grid;
+		padding: 15px 30px 15px;
+	}
+	.ttd-container {
+		width: 100%;
+		justify-items: center;
+	}
+	.ttd-card {
+		height: 100%;
+		width: 80%;
+	}
+	.ttd-card img {
+		width: 100%;
+		height: 180px;
+		object-fit: cover;
+	}
+	.ttd-card-title {
+		padding: 6px;
+		margin: 0;
+	}
+	.footer-container {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		position: static;
+	}
+	.footer {
+		padding-top: 0px;
+	}
 }
