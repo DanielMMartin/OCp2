@@ -40,15 +40,13 @@ body {
 	list-style-type: none;
 	padding: 0;
 	display: flex;
-	/* gap: 60px; */
 	margin: 0;
-	/* height: 80px; */
 	align-items: flex-start;
 }
 
-.menu li {
+/* .menu li {
 	padding-top: 10px;
-}
+} */
 
 .menu label {
 	display: inline-block;
@@ -61,7 +59,12 @@ body {
 	display: none;
 	padding-top: 10px;
 }
-
+#things-to-do-button {
+	padding-top: 10px;
+}
+label[for="things-to-do-button"] {
+	padding: 10px;
+}
 .menu input[type="radio"]:checked + label {
 	color: var(--main-color);
 	border-top: var(--main-color) 4px solid;
@@ -69,9 +72,10 @@ body {
 }
 .menu label:hover {
 	color: var(--main-color);
+	border-top: var(--main-color) 4px solid;
 }
 
-.menu label span::before {
+/* .menu label span::before {
 	content: "";
 	position: absolute;
 	top: -39px;
@@ -80,23 +84,20 @@ body {
 	background-color: var(--main-color);
 	transition: width 0.3s;
 	width: 0;
-}
+} */
 
-.menu label:hover span::before {
+/* .menu label:hover span::before {
 	width: 100%;
-}
+} */
 
 /* .menu label span {
 	display: grid;
 	padding: 0px;
 } */
-a:link:visited {
+a:link,
+a:visited {
 	color: black !important;
 	text-decoration: none;
-}
-a:link {
-	text-decoration: none;
-	color: black !important;
 }
 
 .search {
@@ -244,13 +245,8 @@ a:link {
 }
 
 .accommodation-and-popular section {
-	/* background-color: var(--main-bg-color); */
 	border-radius: 15px;
 	padding: 15px 30px 15px;
-	box-sizing: border-box;
-	/* width: 100%; 
-	 margin: 20px;
-	gap: 4px; */
 }
 
 /****** Accommodation ***********/
@@ -274,10 +270,6 @@ a:link {
 	border-radius: 15px 15px 0px 0px;
 	border: 5px;
 	object-fit: cover;
-}
-
-.sm {
-	margin: none;
 }
 
 /****** Popular ***********/
@@ -352,6 +344,7 @@ a:link {
 	padding-left: 5%;
 }
 
+/* footer */
 .footer {
 	margin: 0;
 	line-height: 2;
@@ -361,11 +354,8 @@ a:link {
 	display: flex;
 	max-width: 1340px;
 	width: 90%;
-	max-width: 1340px;
-	width: 90%;
 }
 
-/* footer */
 .footer-section {
 	display: flex;
 	flex-direction: column;
@@ -409,12 +399,6 @@ a:link {
 		display: grid;
 		grid-template-columns: 1fr;
 		gap: 50px;
-	}
-	.popular-cards {
-		display: grid;
-		grid-template-rows: 1fr;
-		grid-template-columns: 1fr 1fr 1fr;
-		gap: 20px;
 	}
 	.popular-cards {
 		display: grid;
@@ -491,7 +475,6 @@ a:link {
 	.title-bar {
 		display: block;
 		align-self: center;
-		justify-self: space-between;
 		width: 100%;
 	}
 	.menu {
@@ -506,11 +489,22 @@ a:link {
 	.menu input[type="radio"]:checked + label {
 		color: var(--main-color);
 		border-bottom: var(--main-color) 4px solid;
-		border-top: none;
-		padding: 6px;
+		padding: 10px;
+		margin: 0;
+		border-top: unset;
+		width: 100%;
 	}
-
-	.menu :before {
+	.menu label {
+		margin: 0;
+	}
+	.menu label:hover {
+		color: var(--main-color);
+		border-bottom: var(--main-color) 4px solid;
+		margin: 0;
+		border-top: unset;
+		width: 100%;
+	}
+	/* .menu :before {
 		content: "";
 		position: absolute;
 		left: 0;
@@ -522,7 +516,7 @@ a:link {
 	.menu label span::before {
 		top: unset;
 		bottom: -15px;
-	}
+	} */
 
 	.main-statement {
 		padding-left: 20px;
@@ -588,6 +582,7 @@ a:link {
 	}
 	.things-to-do-title {
 		margin-bottom: 20px;
+		padding-left: 30px;
 	}
 	.things-to-do {
 		/* max-width: 768px; */
@@ -602,8 +597,8 @@ a:link {
 		justify-items: center;
 	}
 	.ttd-card {
-		height: 100%;
-		width: 80%;
+		height: auto;
+		width: 100%;
 	}
 	.ttd-card img {
 		width: 100%;
