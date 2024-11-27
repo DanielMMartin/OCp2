@@ -55,25 +55,14 @@
 					</svg>
 				</h1>
 
-				<div class="title-bar">
+				<nav class="title-bar">
 					<ul class="menu">
+						<li> <a class="active" href="#accomodations">Accommodations</a> </li>
 						<li>
-							<input
-								class="selected"
-								type="radio"
-								id="accomodations"
-								name="menu"
-								checked
-							/><label for="accomodations">Accommodations</label>
-						</li>
-						<li>
-							<input type="radio" id="things-to-do-button" name="menu" /><label
-								for="things-to-do-button"
-								>Things to do</label
-							>
+							<a href="#ttd">Things to do</a>
 						</li>
 					</ul>
-				</div>
+				</nav>
 			</div>
 		</header>
 		<!-- This area contains Search bar, filters and (i) section-->
@@ -122,7 +111,7 @@
 							<h2 class="section-title">Marseille Accommodation</h2>
 						</div>
 						<div class="accommodation-cards">
-							<a href="">
+							<a id="#accomodations">
 								<article class="card">
 									<!--TODO: having difficulty sizing accomodation and most popoular
                                      container to match figma mockup, cards for both still look a little off?-->
@@ -363,7 +352,7 @@
                 due to grid giving me problems with alignment and positioning-->
 				<h2 class="things-to-do-title">Things to Do in Marseille</h2>
 
-				<section class="things-to-do">
+				<section id="ttd" class="things-to-do">
 					<a href="#" class="ttd-container"
 						><div class="ttd-card">
 							<img src="./images/thingstodo/ttd-img-1.jpg" alt="Image of port with boats" />
